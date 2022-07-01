@@ -1,8 +1,8 @@
 //Conexion
-const listaProductos = () => fetch('https://ecommerce-gonzalo-duran-chimal.netlify.app/json/db.example.json').then(respuesta => respuesta.json());
+const listaProductos = () => fetch('https://app-products-alurageek.herokuapp.com/productos').then(respuesta => respuesta.json());
 
 const crearProducto = (nombre, precio, imagen, categoria, descripcion) => {
-  return fetch('https://ecommerce-gonzalo-duran-chimal.netlify.app/json/db.example.json', {
+  return fetch('https://app-products-alurageek.herokuapp.com/productos', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -12,18 +12,18 @@ const crearProducto = (nombre, precio, imagen, categoria, descripcion) => {
 };
 
 const eliminarProducto = (id) => {
-  return fetch(`https://ecommerce-gonzalo-duran-chimal.netlify.app/json/db.example.json${id}`, {
+  return fetch(`https://app-products-alurageek.herokuapp.com/productos${id}`, {
     method: "DELETE"
   });
 };
 
 //Detalles del producto por ID
 const detalleProducto = async (id) => {
-  return fetch(`https://ecommerce-gonzalo-duran-chimal.netlify.app/json/db.example.json${id}`).then( respuesta => respuesta.json());
+  return fetch(`https://app-products-alurageek.herokuapp.com/productos${id}`).then( respuesta => respuesta.json());
 };
 
 const actualizarProducto = (nombre, precio, imagen, id, categoria, descripcion) => {
-  return fetch(`https://ecommerce-gonzalo-duran-chimal.netlify.app/json/db.example.json${id}`, {
+  return fetch(`https://app-products-alurageek.herokuapp.com/productos${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
