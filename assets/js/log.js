@@ -8,7 +8,7 @@ const validarLogin = (event) => {
     let input = document.querySelector("[data-name=usuario]").value;
     let pass = document.querySelector("[data-name=pass]").value;
 
-    const email = "abcde@gmail.com";
+    const email = "alura@gmail.com";
     const password = "12345";
 
     if(input == email && pass == password) {
